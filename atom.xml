@@ -6,7 +6,7 @@
   <link href="https://blog.jylin.dev/atom.xml" rel="self"/>
   
   <link href="https://blog.jylin.dev/"/>
-  <updated>2025-10-07T14:04:24.187Z</updated>
+  <updated>2025-10-07T14:20:08.724Z</updated>
   <id>https://blog.jylin.dev/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2023icpc</title>
+    <title>2023 icpc 桃園站 心得</title>
     <link href="https://blog.jylin.dev/2023/10/22/2023_ICPC/"/>
     <id>https://blog.jylin.dev/2023/10/22/2023_ICPC/</id>
     <published>2023-10-21T16:45:34.000Z</published>
-    <updated>2025-10-07T14:04:24.187Z</updated>
+    <updated>2025-10-07T14:20:08.724Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今年靠著topc跟cpe，順利晉級icpc桃園站，這裡記錄一下第一次打icpc的心得。</p><h1 id="出發"><a href="#出發" class="headerlink" title="出發"></a>出發</h1><p>地點在桃園體育館，從中央到那大眾運輸需要搭公車到中壢站在轉乘台鐵到桃園站，接著步行或騎車，於是比賽當天一早七點就在學校等第一班公車了，大概花了一小時抵達。後來得知另一隊搭計程車在跟學校報帳，搭了600塊錢XD。</p><h1 id="比賽"><a href="#比賽" class="headerlink" title="比賽"></a>比賽</h1><p>比賽時間從9:30 ~ 14:30，<del>平常這時候大概在睡覺</del>，根據前幾年歷屆 通常最水兩題是第一題跟最後一題，所以我們就先開這兩題，看了記分板也發現大家都先解這幾題，</p><h2 id="M-簽到題-1-try"><a href="#M-簽到題-1-try" class="headerlink" title="M 簽到題, 1 try"></a>M 簽到題, 1 try</h2><h2 id="A-水題-5-try"><a href="#A-水題-5-try" class="headerlink" title="A 水題, 5 try"></a>A 水題, 5 try</h2><p>給至多1000位的數字，判斷是否被13整除；題目提到將該數字從右至左每三位輪流做加減法，得出的數字<code>ans</code>如果可以被13整除，則原數字也可以被13整除。 輸出<code>ans</code>的絕對值，以及yes &#x2F; no。</p><p>然後我們沒看到要取絕對值，吃了五個罰時…</p><h2 id="B-數學-5-try"><a href="#B-數學-5-try" class="headerlink" title="B 數學, 5 try"></a>B 數學, 5 try</h2><p>給一循還小數，找出該數值最簡分數。 一開始用python， 用內建 gcd 不知為啥一直吃re，後來改C++才ac。</p><h2 id="H-2-try"><a href="#H-2-try" class="headerlink" title="H , 2 try"></a>H , 2 try</h2><p>背包題，文獻+學宇解的，窩不會dp。</p><h2 id="D-模擬-1-try"><a href="#D-模擬-1-try" class="headerlink" title="D 模擬, 1 try"></a>D 模擬, 1 try</h2><p>給一飛機座位圖，<code>.</code>表示乘客，<code>V</code>表示帶有病毒的乘客，相鄰病毒的乘客需要隔離，輸出每位乘客要隔離的天數。 其實某種程度也算水題。</p><h2 id="F-模擬-3-try"><a href="#F-模擬-3-try" class="headerlink" title="F 模擬, 3 try"></a>F 模擬, 3 try</h2><p>給你很多個 task，每個 task 有所需時間跟單位時間罰款，每個 task 所要支付的總罰款為單位時間罰款乘上前面的總和時間，要重新排序所有 task 使得罰款總和最小；隊友(學宇)說最近程設專題剛好有遇到類似題目，就解了。</p><h2 id="C-線段樹-2-try"><a href="#C-線段樹-2-try" class="headerlink" title="C 線段樹, 2 try"></a>C 線段樹, 2 try</h2><p>給<code>n</code>個燈籠，每個燈籠用<code>si</code>跟<code>pi</code>來表示，<code>si</code>可為0(關) &#x2F; 1(開) &#x2F; -1(壞掉)，<code>pi</code>代表該燈籠原始分數。</p><p>給<code>m</code>個操作，有兩種操作:</p><ol><li><code>W l r</code>，將<code>[l, r]</code>區間的燈籠都reverse switch</li><li><code>C score</code>，將當前亮著的燈籠全部加上score分</li></ol><p>輸出最終所有燈籠的分數總合。(n &lt;&#x3D; 1e6, m &lt;&#x3D; 1e6)</p><p>解這題的時候剩下一小時，已經封版了，我們當時在60+名，所以必須要解掉這題才有牌，雖然知道是線段樹，但我們線段樹實作經驗不多，當下有點緊張。</p><p>最後用線段樹維護區間內亮著的燈籠個數，加上懶標跟壞掉的燈籠前處理，兩次ac，鬆了一口氣(還好有放模板)。</p><p>這題解完剩半小時，想說應該有機會銅牌了，就去吃了點東西，回來 稍微看了一下L跟J，但沒什麼想法。</p><h2 id="L"><a href="#L" class="headerlink" title="L"></a>L</h2><p>給你一個數字 N，你要分解成很多個數字並且總和是 N，問你最多可以分解成幾個數字，並且這些數字任取總和都不會是 9。</p><p>後來問其他隊，得知是構造題? 說實話，我到現在都還不是很確定構造題是怎樣的題目…</p><h2 id="J"><a href="#J" class="headerlink" title="J"></a>J</h2><p>這題花了十分鐘才搞懂題目的意思，給你一張只有一個起點跟一個終點帶有邊權跟點權的 DAG，問 critical path 長度多少，若 critical path 恰一個，則要輸出該 path，應該是跟拓樸排序有關，但n跟m只有50跟100，覺得怪怪的，隊友(文獻)說可能最外層要按照時間去遍歷?</p><h1 id="賽後"><a href="#賽後" class="headerlink" title="賽後"></a>賽後</h1><p>這次題目相比前幾年或ncpc，真的是非常平易近人，普遍都是7題以上，前十幾名都10題+…</p><p>最終51名&#x2F;7題拿下一個銅牌。</p><p>能改進的大概就是水題吃太多罰時…，前兩小時總共10個罰時，直接加200 penalty，要不是今年能解的題目數量變多，不然我們可能罰時就輸了。</p><p>另外還要恭喜中央另外兩隊都有晉級到asia play off，真的很強orz，我們隊就看明年能否拿個銀牌吧!</p><p>最後，真的感謝隊友過去一年的練習，感謝你們的carry :D</p>]]></content>
     
